@@ -93,3 +93,35 @@ path{
         transform: translateY(-10);
     }
 }
+
+@media screen and (max-width: 375px) {
+    .wave{
+        bottom: 75px;
+    }
+    .principal__texto-titulo{
+        font-size: 25px;
+    }
+    .principal__texto-subtitulo{
+        font-size: 20px;
+    }
+    .main_section-principal{
+        font-size: 10px;
+        background-image: url(/img/Version\ control-bro\ \(1\).svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .prueva{
+        background-color: rgba(0, 0, 0, 0.623);
+    }
+    .conten__principal-img{
+        display: none;
+    }
+    .section__principal-redes{
+        width: 100%;
+        color: white;
+    }
+    .principal__texto-bienvenida{
+        color: white;
+    }
+   
+}
