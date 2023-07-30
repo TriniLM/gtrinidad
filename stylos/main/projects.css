@@ -19,12 +19,61 @@
     display: flex;
 }
 .projects__olaia-slider{
+    position: relative;
     width:60%;
     height: auto;
     overflow: hidden;
 }
 .olaia__slider-img{
     width: 100%;
+}
+.projects__slider-btn{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.slider__btn{
+    width: 100px;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.363);
+    border: 2px solid var(--quartarian-color);
+    color:white;
+    margin: 10px;
+    overflow: hidden;
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in 0.3s;
+
+}
+.slider__btn:hover{
+    scale: 1.1;
+}
+.slider__btn p{
+    position: absolute;
+    z-index: 9999;
+    font-size: 15px;
+
+ }
+.slider__btn::after{
+     content: "";
+     width: 100px;
+     height: 40px;
+     background-color:var(--quartarian-color);
+     display: block;
+     transform: translateY(-40px);
+     z-index: 99;
+     transition: all ease-in-out 0.3s;
+     scale: 0.8;
+
+}
+.slider__btn:hover::after{
+    transform: translateY(0px);
+    scale: 1;
 }
 .practices__olaia-desciption{
     flex-basis: 40%;
@@ -46,14 +95,7 @@
 .olaia__description-technologies i{
     margin: 0px 10px 0 10px;
 }
-.olaia__description-btn button{
-    width: 80px;
-    height: 40px;
-    background-color: transparent;
-    border: 1px solid var(--quartarian-color);
-    color:var(--secondary-color);
-    font-weight: 500;
-}
+
 
 @media screen and (max-width: 375px) {
     .projects__olaia{
@@ -61,5 +103,12 @@
     }
     .projects__olaia-slider{
         width: 100%;
+    }
+    .slider__btn{
+        width: 50px;
+        height: 25px;
+    }
+    .slider__btn p{
+        font-size: 10px;
     }
 }
